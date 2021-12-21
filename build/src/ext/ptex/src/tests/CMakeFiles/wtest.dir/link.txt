@@ -1,0 +1,1 @@
+/usr/lib/ccache/c++   -std=c++98 -Wall -Wextra -pedantic  -std=gnu++11 -Wno-conversion-null -O3 -DNDEBUG   CMakeFiles/wtest.dir/wtest.cpp.o  -o wtest -rdynamic ../ptex/libPtex.a -lpthread /home/anupam/miniconda3/lib/libz.so -Wl,-rpath,/home/anupam/miniconda3/lib 
