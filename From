@@ -2,6 +2,14 @@ origin	https://github.com/mmp/pbrt-v3/ (fetch)
 origin	https://github.com/mmp/pbrt-v3/ (push)
 
 also see : https://gist.github.com/niksumeiko/8972566
-(so: git remote add new_origin https://github.com/anupamkaul/pbrt-v3.git, etc..)
+(so: git remote add new_origin https://github.com/anupamkaul/pbrt-v3.git, etc, see git.migrate)
+
+to bring in more changes:
+git remote add upstream https://github.com/mmp/pbrt-v3.git
+
+now I have 2 remotes: upstream and origin
+now fetch from upstream, merge/resolve conflicts, push <branch> to origin
+
+
 
  
