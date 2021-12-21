@@ -2,6 +2,7 @@ pbrt, Version 3
 ===============
 
 This is a local fork where I will run some experiments (Anupam)
+(use build/sample.run to run and view a sample pbrt scene from this code)
 
 [![Build Status](https://travis-ci.org/mmp/pbrt-v3.svg?branch=master)](https://travis-ci.org/mmp/pbrt-v3)
 [![Build status](https://ci.appveyor.com/api/projects/status/mlm9g91ejxlcn67s/branch/master?svg=true)](https://ci.appveyor.com/project/mmp/pbrt-v3/branch/master)
