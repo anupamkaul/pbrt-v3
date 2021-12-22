@@ -1,6 +1,6 @@
-./pbrt ../scenes/killeroo-simple.pbrt
-
 ## sudo apt install openexr-viewers
+
+./pbrt ../scenes/killeroo-simple.pbrt
 exrdisplay killeroo-simple.exr
 
 
