@@ -12,6 +12,16 @@ git remote add upstream https://github.com/mmp/pbrt-v3.git
 now I have 2 remotes: upstream and origin
 now fetch from upstream, merge/resolve conflicts, push <branch> to origin
 
+----
+
+v3 scenes are in git://git.pbrt.org/pbrt-v3-scenes
+
+I tried git LFS but was getting errors and finally over-went my account allocation:
+
+https://docs.github.com/en/repositories/working-with-files/managing-large-files/configuring-git-large-file-storage
+https://git-lfs.github.com/
+https://github.com/git-lfs/git-lfs/discussions/4774
+
 
 
  
