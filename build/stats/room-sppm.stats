@@ -1,0 +1,90 @@
+./pbrt ../../github-pbrt-v3-local-scenes/simple/room-sppm.pbrt 
+pbrt version 3 (built Dec 20 2021 at 14:17:52) [Detected 8 cores]
+Copyright (c)1998-2018 Matt Pharr, Greg Humphreys, and Wenzel Jakob.
+The source code to pbrt (but *not* the book contents) is covered by the BSD License.
+See the file LICENSE.txt for the conditions of the license.
+Rendering: [+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]  (100.5s)       
+Statistics:
+  BVH
+    Interior nodes                                                   5769
+    Leaf nodes                                                       5770
+    Primitives per leaf node                          6804 /         5770 (1.18x)
+  Intersections
+    Regular ray intersection tests                              324244897
+    Shadow ray intersection tests                                26625074
+    Ray-triangle intersection tests              369335664 /   1454348342 (25.40%)
+  Memory
+    BVH tree                                                       466.95 kB
+    Film pixels                                                      3.71 MiB
+    Primitives                                                     478.41 kB
+    SPPM Pixels                                                     11.12 MiB
+    Texture MIP maps                                                 5.33 MiB
+    TransformCache                                                 260.00 kB
+    Triangle meshes                                                  1.74 MiB
+  Scene
+    Lights                                                              1
+    Materials created                                                   7
+    Shapes created                                                   6804
+    Probes per TransformCache lookup                                1.000 avg [range 1 - 1]
+    TransformCache hits                              13566 /        13574 (99.94%)
+    Triangles per triangle mesh                       6804 /         6786 (1.00x)
+  Stochastic Progressive Photon Mapping
+    Photon paths followed                                       124416000
+    Grid cells per visible point                                    8.672 avg [range 1 - 27]
+    Visible points checked per photon intersection   386550324 /    312085210 (1.24x)
+  Texture
+    EWA lookups                                                 244103784
+  Profile
+    Integrator::Render()                                            99.83% (   0:01:40.53)
+      SPPM camera pass                                              56.35% (   0:00:56.75)
+        Accelerator::Intersect()                                    16.19% (   0:00:16.30)
+          Triangle::Intersect()                                      6.88% (   0:00:06.92)
+        BSDF::Sample_f()                                             4.05% (   0:00:04.07)
+        Camera::GenerateRay[Differential]()                          2.17% (   0:00:02.18)
+        Direct lighting                                             11.75% (   0:00:11.83)
+          Accelerator::IntersectP()                                  2.12% (   0:00:02.13)
+            Triangle::IntersectP()                                   0.72% (   0:00:00.72)
+          BSDF::PDF()                                                0.18% (   0:00:00.18)
+          BSDF::f()                                                  0.40% (   0:00:00.40)
+          Light::Sample_*()                                          1.77% (   0:00:01.77)
+          Sampler::GetSample[12]D()                                  5.17% (   0:00:05.20)
+        Material::ComputeScatteringFunctions()                      11.51% (   0:00:11.59)
+          MIPMap::Lookup() (EWA)                                     8.50% (   0:00:08.56)
+        Sampler::GetSample[12]D()                                    4.84% (   0:00:04.87)
+        Sampler::StartPixelSample()                                  1.10% (   0:00:01.10)
+      SPPM grid construction                                         4.46% (   0:00:04.49)
+      SPPM photon pass                                              37.64% (   0:00:37.91)
+        Accelerator::Intersect()                                    17.88% (   0:00:18.00)
+          Triangle::Intersect()                                      8.21% (   0:00:08.26)
+        BSDF::Sample_f()                                             3.48% (   0:00:03.49)
+        BSDF::f()                                                    0.64% (   0:00:00.64)
+        Light::Sample_*()                                            1.15% (   0:00:01.15)
+        Material::ComputeScatteringFunctions()                       2.49% (   0:00:02.50)
+          MIPMap::Lookup() (EWA)                                     1.09% (   0:00:01.09)
+      SPPM photon statistics update                                  1.28% (   0:00:01.28)
+    Scene parsing and creation                                       0.17% (   0:00:00.17)
+      Acceleration structure creation                                0.00% (   0:00:00.00)
+      Texture loading                                                0.04% (   0:00:00.04)
+  Profile (flattened)
+    Accelerator::Intersect()                                        18.97% (   0:00:19.10)
+    Triangle::Intersect()                                           15.09% (   0:00:15.19)
+    SPPM photon pass                                                12.02% (   0:00:12.10)
+    Sampler::GetSample[12]D()                                       10.01% (   0:00:10.08)
+    MIPMap::Lookup() (EWA)                                           9.59% (   0:00:09.65)
+    BSDF::Sample_f()                                                 7.52% (   0:00:07.57)
+    SPPM camera pass                                                 4.74% (   0:00:04.76)
+    SPPM grid construction                                           4.46% (   0:00:04.49)
+    Material::ComputeScatteringFunctions()                           4.41% (   0:00:04.44)
+    Light::Sample_*()                                                2.91% (   0:00:02.93)
+    Camera::GenerateRay[Differential]()                              2.17% (   0:00:02.18)
+    Direct lighting                                                  2.11% (   0:00:02.12)
+    Accelerator::IntersectP()                                        1.40% (   0:00:01.40)
+    SPPM photon statistics update                                    1.28% (   0:00:01.28)
+    Sampler::StartPixelSample()                                      1.10% (   0:00:01.10)
+    BSDF::f()                                                        1.04% (   0:00:01.04)
+    Triangle::IntersectP()                                           0.72% (   0:00:00.72)
+    BSDF::PDF()                                                      0.18% (   0:00:00.18)
+    Scene parsing and creation                                       0.13% (   0:00:00.13)
+    Integrator::Render()                                             0.09% (   0:00:00.09)
+    Texture loading                                                  0.04% (   0:00:00.04)
+    Acceleration structure creation                                  0.00% (   0:00:00.00)
